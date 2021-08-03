@@ -1,0 +1,142 @@
+* {
+  border-radius: 0 !important;
+}
+
+body,
+html {
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+header {
+  z-index: 9999;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.scroll-down header {
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+}
+
+.bgGreen {
+  background: #00a192 !important;
+}
+
+.textGreen {
+  color: #00a192 !important;
+}
+
+.activeLink {
+  color: #00a192 !important;
+}
+
+.loraFont {
+  font-family: "Lora", serif;
+}
+
+.btnGreen {
+  color: #fff;
+  background-color: #00a192 !important;
+  border-color: #00a192 !important;
+}
+
+.btnGreen:hover {
+  color: #fff;
+  background-color: #008e81 !important;
+  border-color: #008e81 !important;
+}
+
+.btnDark {
+  color: #fff;
+  background-color: #212529;
+  border-color: #212529;
+}
+
+.btnDark:hover {
+  color: #fff;
+  background-color: #00a192 !important;
+  border-color: #00a192 !important;
+}
+
+.hoverGreen:hover {
+  color: #00a192 !important;
+}
+
+.curserPoint {
+  cursor: pointer;
+}
+
+.homeHeadImg,
+.contactHeadImg,
+.blogsHeadImg,
+.videosHeadImg,
+.blogOneHeadImg {
+  position: relative;
+  height: 60vh;
+  background-image: url("../img/undraw_book_lover_mkck.svg");
+  background-size: 70vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center 35%;
+}
+
+.blogsHeadImg {
+  background-image: url("../img/undraw_reading_time_gvg0.svg");
+  background-size: 75vh;
+}
+
+.videosHeadImg {
+  background-image: url("../img/undraw_Video_streaming_re_v3qg.svg");
+  background-size: 60vh;
+}
+
+.contactHeadImg {
+  background-image: url("../img/undraw_message_sent_1030.svg");
+  background-size: 85vh;
+}
+
+.blogOneHeadImg {
+  background-image: url("../img/undraw_book_reading_kx9s.svg");
+  background-size: 75vh;
+}
+
+.homeHeadImg::before,
+.contactHeadImg::before,
+.blogsHeadImg::before,
+.videosHeadImg::before,
+.blogOneHeadImg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #212529;
+  opacity: 0.5;
+}
+
+.divCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.menu > ul > li > a:hover {
+  color: #00a192 !important;
+}
+
+.footer {
+  position: relative;
+}
+
+textarea {
+  resize: none;
+}
+
+.textjustify {
+  text-align: justify;
+}
+/*# sourceMappingURL=style.css.map */
