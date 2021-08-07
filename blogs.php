@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap-5.1.0-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -56,7 +56,7 @@
                                     Problems look mighty small from 150 miles up
                                 </p>
                                 <p class="loraFont fst-italic text-muted">
-                                    Posted by <span class="text-dark">Sandeep</span> on July 17,
+                                    Posted by <span class="text-dark">Admin</span> on July 17,
                                     2021
                                 </p>
                             </a>
@@ -74,7 +74,7 @@
                                     Problems look mighty small from 150 miles up
                                 </p>
                                 <p class="loraFont fst-italic text-muted">
-                                    Posted by <span class="text-dark">Sandeep</span> on July 17,
+                                    Posted by <span class="text-dark">Admin</span> on July 17,
                                     2021
                                 </p>
                             </a>
@@ -111,7 +111,7 @@
                                     Problems look mighty small from 150 miles up
                                 </p>
                                 <p class="loraFont fst-italic text-muted">
-                                    Posted by <span class="text-dark">Sandeep</span> on July 17,
+                                    Posted by <span class="text-dark">Admin</span> on July 17,
                                     2021
                                 </p>
                             </a>
@@ -129,7 +129,7 @@
                                     Problems look mighty small from 150 miles up
                                 </p>
                                 <p class="loraFont fst-italic text-muted">
-                                    Posted by <span class="text-dark">Sandeep</span> on July 17,
+                                    Posted by <span class="text-dark">Admin</span> on July 17,
                                     2021
                                 </p>
                             </a>
@@ -153,7 +153,7 @@
         ?>
     </footer>
 
-    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap-5.1.0-dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/web.js"></script>
 </body>
 

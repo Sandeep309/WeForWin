@@ -1,5 +1,7 @@
 * {
   border-radius: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 body,
 html {
@@ -25,7 +27,12 @@ header {
 // color variable
 $primaryColor: #00a192 !important;
 // $primaryblue: #0085a1 !important;
-
+.divCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 // Css Classes
 .bgGreen {
   background: $primaryColor;
@@ -131,21 +138,60 @@ $primaryColor: #00a192 !important;
 .menu > ul > li > a:hover {
   color: $primaryColor;
 }
-// .menu > ul > li::after {
-//   content: "";
-//   background: $primaryblue;
-//   height: 3px;
-//   display: block;
+.menu > ul > li {
+  float: left;
+  position: relative;
+}
+.menu > ul > li .active::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  border-bottom: 4px solid $primaryColor;
+}
+.dropdown-item:hover {
+  background-color: $primaryColor;
+  color: white;
+}
+.dropdown-item:active {
+  background-color: $primaryColor;
+  color: white;
+}
+// .navbar-toggler {
+//   transform: rotate(0);
+//   transition: all 0.3s linear;
+// }
+// .navbarTogglerRotate {
+//   transform: rotate(90deg);
 // }
 .footer {
   position: relative;
 }
-textarea {
-  resize: none;
-}
+// textarea {
+//   resize: none;
+// }
 .textjustify {
   text-align: justify;
 }
-// .zIndexMax {
-//   z-index: 99999 !important;
-// }
+// Scroll Indicator
+.progressContainer {
+  width: 100%;
+  height: 4px;
+  background: #ccc;
+}
+.progressBar {
+  height: 4px;
+  background: #04aa6d;
+  width: 0%;
+  transition: all 0.3s linear;
+}
+@media only screen and (max-width: 768px) {
+  .menu > ul > li .active::after {
+    content: " ";
+    position: unset;
+    display: block;
+    width: 20%;
+    border-bottom: 4px solid $primaryColor;
+  }
+}
