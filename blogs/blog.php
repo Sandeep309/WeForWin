@@ -35,19 +35,19 @@
                     <div class="offcanvas-body menu">
                         <ul class="navbar-nav justify-content-end flex-grow-1 gap-md-4">
                             <li class="nav-item">
-                                <a class="nav-link fw-bold " aria-current="page" href="index.php">
+                                <a class="nav-link fw-bold " aria-current="page" href="../index.php">
                                     Home
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fw-bold" href="blogs.php">Blogs</a>
+                                <a class="nav-link fw-bold" href="../blogs.php">Blogs</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link fw-bold" href="videos.php">Videos</a>
+                                <a class="nav-link fw-bold" href="../videos.php">Videos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fw-bold" href="contact.php">Contact</a>
+                                <a class="nav-link fw-bold" href="../contact.php">Contact</a>
                             </li>
                         </ul>
                         <form class="d-flex gap-3 ms-md-3 mt-3 mt-md-auto">
@@ -58,7 +58,7 @@
                                 <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="dropdownMenu">
                                     <!-- <li><a class="dropdown-item" href="#">New Blog</a></li>
                   <li><a class="dropdown-item" href="#">Settings</a></li> -->
-                                    <li><a class="dropdown-item" href="login.php">Login</a></li>
+                                    <li><a class="dropdown-item" href="../login.php">Login</a></li>
                                     <!-- <hr /> -->
                                     <li><a class="dropdown-item" href="#">Sign-up</a></li>
                                 </ul>
