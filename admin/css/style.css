@@ -1,0 +1,158 @@
+* {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.myLigthGrey {
+  background-color: #f3f3f3 !important;
+}
+
+.primaryLightBlue {
+  background-color: #008174 !important;
+}
+
+.displayArea {
+  height: 100vh;
+}
+
+.myHead {
+  width: 100%;
+  height: 52px;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 9999;
+  background-color: #00a192 !important;
+}
+
+.contentContainer {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 3.2rem;
+}
+
+.leftPanel {
+  width: 270px;
+  height: 100%;
+  background-color: #00a192 !important;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 99;
+  overflow: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.rightPanel {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.pClose {
+  width: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.curserPoint {
+  cursor: pointer !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.nav > .nav-item > a,
+.nav > .nav-item > .panel a {
+  color: #f4f4f4;
+  font-size: 1.1rem !important;
+}
+
+.nav > .nav-item > a:hover,
+.nav > .nav-item > .panel > a:hover {
+  color: #f7f7f7 !important;
+  background-color: #00645a60 !important;
+}
+
+.myActive {
+  color: #f7f7f7 !important;
+  background-color: #008174 !important;
+}
+
+.panel {
+  background-color: transparent;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.panel > a {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.panel > a:hover {
+  padding-left: 2rem;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.arrowDefault {
+  -webkit-transform: rotate();
+          transform: rotate();
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.arrowRotate {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+@media screen and (max-width: 990px) {
+  .leftPanel {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .pClose {
+    width: 270px;
+    height: 100%;
+    position: fixed;
+    background-color: #00a192 !important;
+    z-index: 99;
+    overflow: auto;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -18,13 +18,10 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="container-fluid p-0 shadow-sm sticky-top">
-        <!-- Navigation -->
-        <?php
-        include('./include/menu.php');
-        ?>
-    </header>
+    <!-- Header & Navigation -->
+    <?php
+    include('./include/menu.php');
+    ?>
 
     <!-- Header image -->
     <figure class="container-fluid blogsHeadImg">
@@ -45,42 +42,43 @@
 
             <!-- Blog Contant -->
             <div class="row">
-                <div class="col-md-6 mb-3">
-                    <div class="card border-0 curserPoint">
-                        <div class="card-body border-bottom ">
-                            <a href="blogs/blog.php" class="text-decoration-none text-dark hoverGreen">
-                                <p class="h3 card-title fw-bold">
-                                    Man must explore, and this is exploration at its greatest
-                                </p>
-                                <p class="h4 card-text fw-light">
-                                    Problems look mighty small from 150 miles up
-                                </p>
-                                <p class="loraFont fst-italic text-muted">
-                                    Posted by <span class="text-dark">Admin</span> on July 17,
-                                    2021
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <div class="card border-0 curserPoint">
-                        <div class="card-body border-bottom ">
-                            <a href="blogs/blog.php" class="text-decoration-none text-dark hoverGreen">
-                                <p class="h3 card-title fw-bold">
-                                    Man must explore, and this is exploration at its greatest
-                                </p>
-                                <p class="h4 card-text fw-light">
-                                    Problems look mighty small from 150 miles up
-                                </p>
-                                <p class="loraFont fst-italic text-muted">
-                                    Posted by <span class="text-dark">Admin</span> on July 17,
-                                    2021
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                include("./process/connectDb.php");
+                if ($connect) {
+                    $sql = 'SELECT * FROM blogs Order by id DESC';
+                    $result = mysqli_query($connect, $sql);
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($data = mysqli_fetch_assoc($result)) :
+                ?>
+                            <div class="col-md-6 mb-3">
+                                <div class="card border-0 curserPoint">
+                                    <div class="card-body border-bottom ">
+                                        <a href="blog.php?id=<?php echo $data['id']; ?>" class="text-decoration-none text-dark hoverGreen">
+                                            <p class="h3 card-title fw-bold">
+                                                <?php echo $data['title']; ?>
+                                            </p>
+                                            <p class="h4 card-text fw-light lineClamp">
+                                                <?php echo $data['content']; ?>
+                                            </p>
+                                            <p class="loraFont fst-italic text-muted">
+                                                Posted by
+                                                <span class="text-dark">
+                                                    <?php echo $data['author']; ?>
+                                                </span>
+                                                on <?php echo date('M d, Y', strtotime($data['date'])); ?>
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                <?php
+                        endwhile;
+                    } else {
+                        echo "query failed";
+                    }
+                }
+                mysqli_close($connect);
+                ?>
             </div>
             <div class="mt-3 text-end">
                 <button class="btn btnGreen shadow-none">
@@ -100,42 +98,43 @@
 
             <!-- Blog Contant -->
             <div class="row">
-                <div class="col-md-6 mb-3">
-                    <div class="card border-0 curserPoint">
-                        <div class="card-body border-bottom ">
-                            <a href="blogs/blog.php" class="text-decoration-none text-dark hoverGreen">
-                                <p class="h3 card-title fw-bold">
-                                    Man must explore, and this is exploration at its greatest
-                                </p>
-                                <p class="h4 card-text fw-light">
-                                    Problems look mighty small from 150 miles up
-                                </p>
-                                <p class="loraFont fst-italic text-muted">
-                                    Posted by <span class="text-dark">Admin</span> on July 17,
-                                    2021
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <div class="card border-0 curserPoint">
-                        <div class="card-body border-bottom ">
-                            <a href="blogs/blog.php" class="text-decoration-none text-dark hoverGreen">
-                                <p class="h3 card-title fw-bold">
-                                    Man must explore, and this is exploration at its greatest
-                                </p>
-                                <p class="h4 card-text fw-light">
-                                    Problems look mighty small from 150 miles up
-                                </p>
-                                <p class="loraFont fst-italic text-muted">
-                                    Posted by <span class="text-dark">Admin</span> on July 17,
-                                    2021
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                include("./process/connectDb.php");
+                if ($connect) {
+                    $sql = 'SELECT * FROM blogs Order by id DESC';
+                    $result = mysqli_query($connect, $sql);
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($data = mysqli_fetch_assoc($result)) :
+                ?>
+                            <div class="col-md-6 mb-3">
+                                <div class="card border-0 curserPoint">
+                                    <div class="card-body border-bottom ">
+                                        <a href="blog.php?id=<?php echo $data['id']; ?>" class="text-decoration-none text-dark hoverGreen">
+                                            <p class="h3 card-title fw-bold">
+                                                <?php echo $data['title']; ?>
+                                            </p>
+                                            <p class="h4 card-text fw-light lineClamp">
+                                                <?php echo $data['content']; ?>
+                                            </p>
+                                            <p class="loraFont fst-italic text-muted">
+                                                Posted by
+                                                <span class="text-dark">
+                                                    <?php echo $data['author']; ?>
+                                                </span>
+                                                on <?php echo date('M d, Y', strtotime($data['date'])); ?>
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                <?php
+                        endwhile;
+                    } else {
+                        echo "query failed";
+                    }
+                }
+                mysqli_close($connect);
+                ?>
             </div>
             <div class="mt-3 text-end">
                 <button class="btn btnGreen shadow-none">

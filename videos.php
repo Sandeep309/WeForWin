@@ -18,13 +18,10 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="container-fluid p-0 shadow-sm sticky-top">
-        <!-- Navigation -->
-        <?php
-        include('./include/menu.php');
-        ?>
-    </header>
+    <!-- Header & Navigation -->
+    <?php
+    include('./include/menu.php');
+    ?>
 
     <!-- Header image -->
     <figure class="container-fluid videosHeadImg">

@@ -22,6 +22,6 @@
         </div>
     </div>
     <div class="d-flex justify-content-center">
-        <p class="loraFont fst-italic">Copyright © Your Website 2021</p>
+        <p class="loraFont fst-italic">Copyright © We for win 2021</p>
     </div>
 </div>

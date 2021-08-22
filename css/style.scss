@@ -186,6 +186,15 @@ $primaryColor: #00a192 !important;
   width: 0%;
   transition: all 0.3s linear;
 }
+.maxHeight {
+  max-height: 50% !important;
+}
+.lineClamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 @media only screen and (max-width: 768px) {
   .menu > ul > li .active::after {
     content: " ";
