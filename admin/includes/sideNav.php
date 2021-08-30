@@ -1,8 +1,9 @@
 <nav class="nav flex-column bd-highlight">
     <div class="nav-item">
         <p class="fw-bold mb-0 pt-4 px-3">ANALYZE</p>
-        <a class="nav-link " href="index.php">
-            <i class="fas fa-chart-pie me-2"></i>Dashboard
+        <a class="nav-link d-flex justify-content-between align-items-center" href="index.php">
+            Dashboard
+            <i class="fas fa-chart-pie"></i>
         </a>
     </div>
     <div class="nav-item">
@@ -24,14 +25,22 @@
                 <i class="fas fa-user-tie me-2"></i>Employe03
             </a>
         </div>
-        <a class="nav-link" href="blogList.php">
-            <i class="fas fa-columns me-2"></i>Blog List
+        <a class="nav-link d-flex justify-content-between align-items-center" href="blogList.php">
+            Blog List
+            <i class="fas fa-columns"></i>
         </a>
-        <a class="nav-link" href="addBlog.php">
-            <i class="fas fa-user-plus me-2"></i>Add Blog
+        <a class="nav-link d-flex justify-content-between align-items-center" href="addBlog.php">
+            Add Blog
+            <i class="fas fa-user-plus"></i>
         </a>
-        <a class="nav-link" href="RemoveBlog.php">
-            <i class="fas fa-user-minus me-2"></i>Remove Blog
+        <a class="nav-link d-flex justify-content-between align-items-center" href="RemoveBlog.php">
+            Remove Blog
+            <i class="fas fa-user-minus"></i>
+        </a>
+        </a>
+        <a class="nav-link d-flex justify-content-between align-items-center" href="recyleBin.php">
+            Recyle Bin
+            <i class="fas fa-trash-restore"></i>
         </a>
 
     </div>

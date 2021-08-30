@@ -1,8 +1,10 @@
 // Side Panel Toggle
 const burger = document.querySelector(".burger");
+const bugerIcon = document.querySelector(".burger > i");
 const leftSide = document.querySelector(".leftPanel");
 burger.addEventListener("click", () => {
   leftSide.classList.toggle("pClose");
+  bugerIcon.classList.toggle("burgerRotate");
 });
 
 // Accordian

@@ -1,6 +1,6 @@
 <div class="myHead px-3 shadow-sm">
     <div class="d-flex gap-4 align-items-center">
-        <h5 class="text-light burger"><i class="fas fa-bars"></i></h5>
+        <h5 class="text-light curserPoint burger"><i class="fas fa-bars"></i></h5>
         <h5 class="text-light">WE FOR WIN</h5>
     </div>
     <div class="d-flex gap-4 align-items-center">

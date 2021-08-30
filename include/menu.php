@@ -13,14 +13,11 @@
                 <div class="offcanvas-body menu">
                     <ul class="navbar-nav justify-content-end flex-grow-1 gap-md-4">
                         <li class="nav-item">
-                            <a class="nav-link fw-bold " aria-current="page" href="index.php">
-                                Home
-                            </a>
+                            <a class="nav-link fw-bold" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link fw-bold" href="blogs.php">Blogs</a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link fw-bold" href="videos.php">Videos</a>
                         </li>
@@ -28,20 +25,15 @@
                             <a class="nav-link fw-bold" href="contact.php">Contact</a>
                         </li>
                     </ul>
-                    <form class="d-flex gap-3 ms-md-3 mt-3 mt-md-auto">
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle shadow-none" type="button" id="dropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-user-circle"></i>
-                            </button>
-                            <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="dropdownMenu">
-                                <!-- <li><a class="dropdown-item" href="#">New Blog</a></li>
-                  <li><a class="dropdown-item" href="#">Settings</a></li> -->
-                                <li><a class="dropdown-item" href="login.php">Login</a></li>
-                                <!-- <hr /> -->
-                                <li><a class="dropdown-item" href="#">Sign-up</a></li>
-                            </ul>
-                        </div>
-                    </form>
+                    <div class="dropdown d-md-none">
+                        <button class="btn dropdown-toggle shadow-none" type="button" id="dropdownMenu" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle"></i>
+                        </button>
+                        <ul class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMenu">
+                            <li><a class="dropdown-item" href="login.php">Login</a></li>
+                            <li><a class="dropdown-item" href="#">Sign-up</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

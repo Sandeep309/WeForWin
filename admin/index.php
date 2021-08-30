@@ -37,35 +37,47 @@
 
                 <div class="row">
                     <div class="col-md-6 col-lg-3 mb-3">
-                        <div class="card bg-primary text-light shadow border-0 ">
+                        <div class="card bg-primary text-light shadow border-0 cardBlue">
                             <div class="card-body">
-                                <p>Total Blog</p>
+                                <p class="fs-4">Total Blog</p>
                             </div>
-                            <div class="card-footer">View more</div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <a href="#" class="stretched-link text-decoration-none text-light">View more</a>
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-3">
-                        <div class="card bg-warning shadow border-0 ">
+                        <div class="card bg-warning shadow border-0 cardYellow">
                             <div class="card-body">
-                                <p>Total Blog</p>
+                                <p class="fs-4">Total Blog</p>
                             </div>
-                            <div class="card-footer">View more</div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <a href="#" class="stretched-link text-decoration-none text-dark">View more</a>
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-3">
-                        <div class="card bg-success text-light shadow border-0 ">
+                        <div class="card bg-success text-light shadow border-0 cardGreen">
                             <div class="card-body">
-                                <p>Total Blog</p>
+                                <p class="fs-4">Total Blog</p>
                             </div>
-                            <div class="card-footer">View more</div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <a href="#" class="stretched-link text-decoration-none text-light">View more</a>
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-3">
-                        <div class="card bg-danger text-light shadow border-0 ">
+                        <div class="card bg-danger text-light shadow border-0 cardRed">
                             <div class="card-body">
-                                <p>Total Blog</p>
+                                <p class="fs-4">Total Blog</p>
                             </div>
-                            <div class="card-footer">View more</div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <a href="#" class="stretched-link text-decoration-none text-light">View more</a>
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
