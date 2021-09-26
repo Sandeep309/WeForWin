@@ -24,11 +24,11 @@
   ?>
 
   <!-- Header image -->
-  <figure class="container-fluid contactHeadImg">
+  <div class="container-fluid contactHeadImg">
     <div class="contaner divCenter">
       <h1 class="text-light fw-bold">Contact</h1>
     </div>
-  </figure>
+  </div>
 
   <!-- Main Body -->
   <main class="container-fluid mt-5">
@@ -57,7 +57,7 @@
             </div>
             <div class="mb-3">
               <label for="forMassage" class="form-label">Massage</label>
-              <textarea class="form-control" name="" id="" cols="3" rows="2"></textarea>
+              <textarea class="form-control" name="" id="" cols="3" rows="4"></textarea>
             </div>
             <button type="submit" class="btn btnGreen">Send</button>
           </form>

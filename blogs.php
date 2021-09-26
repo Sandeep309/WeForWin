@@ -24,11 +24,11 @@
     ?>
 
     <!-- Header image -->
-    <figure class="container-fluid blogsHeadImg">
+    <div class="container-fluid blogsHeadImg">
         <div class="contaner divCenter">
             <h1 class="text-light fw-bold">Blogs</h1>
         </div>
-    </figure>
+    </div>
 
     <!-- Main Body -->
     <main class="container-fluid mt-5">

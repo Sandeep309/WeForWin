@@ -48,7 +48,7 @@ body {
   padding-top: 3.2rem;
 }
 
-.leftPanel {
+.contentContainer .leftPanel {
   width: 270px;
   height: 100%;
   background-color: #00a192 !important;
@@ -67,14 +67,14 @@ body {
   position: relative;
 }
 
-.rightPanel {
+.contentContainer .rightPanel {
   width: 100%;
   height: 100%;
   padding: 1rem;
   overflow: auto;
 }
 
-.pClose {
+.contentContainer .pClose {
   width: 0;
   padding: 0;
   overflow: hidden;
@@ -95,7 +95,7 @@ body {
 }
 
 .nav > .nav-item > a:hover,
-.nav > .nav-item > .panel > a:hover {
+.nav > .nav-item > .panel a:hover {
   color: #f7f7f7 !important;
   background-color: #00645a60 !important;
 }
@@ -128,15 +128,13 @@ body {
   transition: all 0.2s linear;
 }
 
-.panel > a {
+.panel a {
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
-.panel > a:hover {
+.panel a:hover {
   padding-left: 2rem;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
 }
 
 .arrowDefault {
@@ -153,7 +151,7 @@ body {
   transition: all 0.2s linear;
 }
 
-.burger > i {
+.burger i {
   -webkit-transform: rotate(0);
           transform: rotate(0);
   -webkit-transition: all 0.2s linear;
@@ -213,13 +211,13 @@ body {
           box-shadow: 0 0.5rem 1rem #dc3545 !important;
 }
 
-@media screen and (max-width: 990px) {
-  .leftPanel {
+@media screen and (max-width: 991.98px) {
+  .contentContainer .leftPanel {
     width: 0;
     padding: 0;
     overflow: hidden;
   }
-  .pClose {
+  .contentContainer .pClose {
     width: 270px;
     height: 100%;
     position: fixed;

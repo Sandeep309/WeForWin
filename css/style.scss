@@ -9,7 +9,6 @@ html {
   scroll-behavior: smooth;
 }
 header {
-  // position: fixed;
   z-index: 9999;
   transition: all 300ms ease-in-out;
 }
@@ -19,14 +18,9 @@ header {
     transform: translate3d(0, -100%, 0);
   }
 }
-// .scroll-up {
-//   header {
-//     // filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
-//   }
-// }
 // color variable
 $primaryColor: #00a192 !important;
-// $primaryblue: #0085a1 !important;
+
 .divCenter {
   position: absolute;
   top: 50%;
@@ -51,50 +45,42 @@ $primaryColor: #00a192 !important;
   background-color: $primaryColor;
   border-color: $primaryColor;
   transition: all 0.2s linear;
-}
-.btnGreen:hover {
-  color: #fff;
-  background-color: #008e81 !important;
-  border-color: #008e81 !important;
+
+  &:hover {
+    color: #fff;
+    background-color: #008e81 !important;
+    border-color: #008e81 !important;
+  }
 }
 .btnDark {
   color: #fff;
   background-color: #212529;
   border-color: #212529;
   transition: all 0.2s linear;
-}
-.btnDark:hover {
-  color: #fff;
-  background-color: $primaryColor;
-  border-color: $primaryColor;
+
+  &:hover {
+    color: #fff;
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+  }
 }
 .hoverGreen {
   transition: all 0.2s linear;
-}
-.hoverGreen:hover {
-  color: $primaryColor;
+
+  &:hover {
+    color: $primaryColor;
+  }
 }
 .curserPoint {
   cursor: pointer;
 }
-// Without Parallax
-// .homeHeadImg,
-// .contactHeadImg {
-//   position: relative;
-//   //   margin-top: 2%;
-//   height: 60vh;
-//   background-image: url("../img/undraw_book_lover_mkck.svg");
-//   background-size: contain;
-//   background-repeat: no-repeat;
-//   // background-attachment: fixed;
-//   background-position: center;
-// }
 // With Parallax
 .homeHeadImg,
 .contactHeadImg,
 .blogsHeadImg,
 .videosHeadImg,
-.blogOneHeadImg {
+.blogOneHeadImg,
+.aboutHeadImg {
   position: relative;
   //   margin-top: 2%;
   height: 60vh;
@@ -103,6 +89,17 @@ $primaryColor: #00a192 !important;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center 35%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #212529;
+    opacity: 0.5;
+  }
 }
 .blogsHeadImg {
   background-image: url("../img/undraw_reading_time_gvg0.svg");
@@ -120,19 +117,9 @@ $primaryColor: #00a192 !important;
   background-image: url("../img/undraw_book_reading_kx9s.svg");
   background-size: 75vh;
 }
-.homeHeadImg::before,
-.contactHeadImg::before,
-.blogsHeadImg::before,
-.videosHeadImg::before,
-.blogOneHeadImg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #212529;
-  opacity: 0.5;
+.aboutHeadImg {
+  background-image: url("../img/undraw_Partying_re_at7f.svg");
+  background-size: 75vh;
 }
 .divCenter {
   position: absolute;
@@ -140,29 +127,52 @@ $primaryColor: #00a192 !important;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.menu > ul > li > a:hover {
-  color: $primaryColor;
+.menu {
+  ul {
+    li {
+      float: left;
+      position: relative;
+
+      .active {
+        &::after {
+          content: " ";
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -8px;
+          border-bottom: 4px solid $primaryColor;
+        }
+      }
+      a {
+        &:hover {
+          color: $primaryColor;
+        }
+      }
+    }
+  }
 }
-.menu > ul > li {
-  float: left;
-  position: relative;
+.dropMenu {
+  i,
+  &::after {
+    color: rgba(0, 0, 0, 0.55);
+  }
 }
-.menu > ul > li .active::after {
-  content: " ";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -8px;
-  border-bottom: 4px solid $primaryColor;
+.dropdown-menu {
+  right: 0 !important;
+  left: unset !important;
 }
-.dropdown-item:hover {
-  background-color: $primaryColor;
-  color: white;
+.dropdown-item {
+  &:hover,
+  &:active {
+    background-color: $primaryColor;
+    color: white;
+  }
 }
-.dropdown-item:active {
-  background-color: $primaryColor;
-  color: white;
-}
+// .dropdown-item.active {
+//   background-color: $primaryColor;
+//   color: white;
+// }
+
 // .navbar-toggler {
 //   transform: rotate(0);
 //   transition: all 0.3s linear;
@@ -173,9 +183,9 @@ $primaryColor: #00a192 !important;
 .footer {
   position: relative;
 }
-// textarea {
-//   resize: none;
-// }
+textarea {
+  resize: none;
+}
 .textjustify {
   text-align: justify;
 }
@@ -184,28 +194,48 @@ $primaryColor: #00a192 !important;
   width: 100%;
   height: 4px;
   background: #ccc;
-}
-.progressBar {
-  height: 4px;
-  background: #04aa6d;
-  width: 0%;
-  transition: all 0.3s linear;
+
+  .progressBar {
+    height: 4px;
+    background: #04aa6d;
+    width: 0%;
+    transition: all 0.3s linear;
+  }
 }
 .maxHeight {
   max-height: 50% !important;
 }
-.lineClamp {
+.lineClamp,
+.lineClamp8 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-@media only screen and (max-width: 767px) {
-  .menu > ul > li .active::after {
-    content: " ";
-    position: unset;
-    display: block;
-    width: 20%;
-    border-bottom: 4px solid $primaryColor;
+.lineClamp8 {
+  -webkit-line-clamp: 8;
+}
+@media only screen and (max-width: 767.98px) {
+  .menu {
+    ul {
+      li {
+        .active {
+          &::after {
+            content: " ";
+            position: unset;
+            display: block;
+            width: 20%;
+            border-bottom: 4px solid $primaryColor;
+          }
+        }
+      }
+    }
+  }
+  .dropMenu {
+    padding-left: 0;
+  }
+  .dropdown-menu {
+    right: unset !important;
+    left: 0 !important;
   }
 }

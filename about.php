@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Videos</title>
+    <title>About Us</title>
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,44 +24,27 @@
     ?>
 
     <!-- Header image -->
-    <div class="container-fluid videosHeadImg">
+    <div class="container-fluid aboutHeadImg">
         <div class="contaner divCenter">
-            <h1 class="text-light fw-bold">Videos</h1>
+            <h1 class="text-light fw-bold">About Us</h1>
         </div>
     </div>
 
     <!-- Main Body -->
     <main class="container-fluid mt-5">
-        <!-- Video Glance -->
         <section class="container my-5">
             <!-- Blog Title -->
             <div class="text-center my-5">
-                <h2 class="text-center fw-bold text-uppercase">Video Glance</h2>
+                <h2 class="text-center fw-bold text-uppercase">WHO WE ARE</h2>
                 <img src="img/lines.svg" class="img-fluid" alt="" />
             </div>
-            <!-- Video Content -->
             <div class="row">
-                <?php
-                $videoDetails = array(
-                    "I believe every human has a finite number of heartbeats." => "https://www.youtube.com/embed/oqFn6AHoJZQ",
-                    "I don't intend to waste any of mine." => "https://www.youtube.com/embed/oqFn6AHoJZQ",
-                    "Human has a finite number of heartbeats." => "https://www.youtube.com/embed/oqFn6AHoJZQ",
-                );
-                foreach ($videoDetails as $vName => $vSrc) : ?>
-
-                    <div class="col-md-6 col-lg-4 mb-3">
-                        <div class="card border-0">
-                            <iframe class="card-img-top" src="<?php echo $vSrc; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <div class="card-body">
-                                <p><?php echo $vName; ?></p>
-                            </div>
-                        </div>
-                    </div>
-
-                <?php
-                endforeach;
-                ?>
-
+                <div class="col">
+                    <p class="textjustify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat nunc a justo pretium molestie venenatis ut libero. Integer fermentum sem dui. Ut non nulla quam. Donec nec convallis urna. Phasellus viverra dictum varius. Curabitur volutpat ligula vel lectus ultrices, vel fermentum erat efficitur. In eleifend ultricies odio, sed commodo augue tincidunt at. Vivamus tempor volutpat eros, sit amet ultrices sem mollis a. Fusce maximus ac augue vel blandit.
+                        Suspendisse sit amet turpis sit amet magna ullamcorper ornare ac eget mauris. Praesent suscipit hendrerit metus, eu pulvinar metus pretium a. Sed id diam aliquet, aliquam massa eu, gravida elit. Nam blandit mattis leo, a faucibus odio tristique vel. Etiam fringilla, orci sed sagittis eleifend, mi velit semper urna, quis sagittis leo purus vitae mi. Vivamus fringilla vitae ex non lobortis. Proin in semper enim. Morbi id malesuada dolor. Sed nisl ante, pulvinar eu est eget, maximus sodales neque. Vestibulum id suscipit magna. Nulla sed iaculis mi. Proin aliquam malesuada velit a mollis. Praesent vulputate laoreet tortor vitae dapibus. Aliquam porttitor pretium blandit. Sed orci quam, scelerisque ut lobortis vitae, tincidunt quis enim.
+                    </p>
+                </div>
             </div>
         </section>
     </main>

@@ -21,18 +21,22 @@
                         <li class="nav-item">
                             <a class="nav-link fw-bold" href="videos.php">Videos</a>
                         </li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="about.php">About</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link fw-bold" href="contact.php">Contact</a>
                         </li>
                     </ul>
-                    <div class="dropdown d-md-none">
-                        <button class="btn dropdown-toggle shadow-none" type="button" id="dropdownMenu" data-bs-toggle="dropdown">
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle shadow-none dropMenu" type="button" id="dropdownMenu" data-bs-toggle="dropdown">
                             <i class="fas fa-user-circle"></i>
                         </button>
-                        <ul class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMenu">
+                        <ol class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMenu">
                             <li><a class="dropdown-item" href="login.php">Login</a></li>
                             <li><a class="dropdown-item" href="#">Sign-up</a></li>
-                        </ul>
+                        </ol>
                     </div>
                 </div>
             </div>

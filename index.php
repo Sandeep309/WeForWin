@@ -19,16 +19,14 @@
 
 <body>
   <!-- Header & Navigation -->
-  <?php
-  include('./include/menu.php');
-  ?>
+  <?php include('./include/menu.php');  ?>
 
   <!-- Header image -->
-  <figure class="container-fluid homeHeadImg">
+  <div class="container-fluid homeHeadImg">
     <div class="contaner divCenter">
       <h1 class="text-light fw-bold">Home</h1>
     </div>
-  </figure>
+  </div>
 
   <!-- Main Body -->
   <main class="container-fluid mt-5">
@@ -81,10 +79,10 @@
         ?>
       </div>
       <div class="mt-3 text-end">
-        <button class="btn btnGreen shadow-none">
+        <a href="blogs.php" class="btn btnGreen shadow-none">
           <span class="d-flex align-items-center gap-2">OLDER POST<i class="fas fa-long-arrow-alt-right"></i>
           </span>
-        </button>
+        </a>
       </div>
     </section>
 
@@ -137,10 +135,10 @@
         ?>
       </div>
       <div class="mt-3 text-end">
-        <button class="btn btnGreen shadow-none">
+        <a href="blogs.php" class="btn btnGreen shadow-none">
           <span class="d-flex align-items-center gap-2">VIEW MORE<i class="fas fa-long-arrow-alt-right"></i>
           </span>
-        </button>
+        </a>
       </div>
     </section>
 
@@ -165,7 +163,7 @@
             <div class="card border-0">
               <iframe class="card-img-top" src="<?php echo $vSrc; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               <div class="card-body">
-                <p><?php echo $vName; ?></p>
+                <p class="lineClamp"><?php echo $vName; ?></p>
               </div>
             </div>
           </div>
@@ -192,17 +190,11 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <p class="h2">Wo We Are</p>
-          <p class="h5 mb-3 lh-base">
-            I believe every human has a finite number of heartbeats. I don't
-            intend to waste any of mine. I believe every human has a finite
-            number of heartbeats. I don't intend to waste any of mine. I
-            believe every human has a finite number of heartbeats. I don't
-            intend to waste any of mine. I believe every human has a finite
-            number of heartbeats. I don't intend to waste any of mine. I
-            believe every human has a finite number of heartbeats.
+          <p class="h3">Wo We Are</p>
+          <p class="mb-3 lh-base lineClamp8">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
           </p>
-          <button class="btn btnGreen shadow-none">Find more</button>
+          <a href="about.php" class="btn btnGreen shadow-none">Find more</a>
         </div>
       </div>
     </section>
@@ -210,9 +202,7 @@
 
   <!-- Footer -->
   <footer class="container-fluid bg-white border-top">
-    <?php
-    include('./include/footer.php')
-    ?>
+    <?php include('./include/footer.php')  ?>
   </footer>
 
   <script src="bootstrap-5.1.0-dist/js/bootstrap.bundle.min.js"></script>
