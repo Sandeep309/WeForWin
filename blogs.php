@@ -54,7 +54,7 @@
                                 <div class="card border-0 curserPoint">
                                     <div class="card-body border-bottom ">
                                         <a href="blog.php?id=<?php echo $data['id']; ?>" class="text-decoration-none text-dark hoverGreen">
-                                            <p class="h3 card-title fw-bold">
+                                            <p class="h3 card-title fw-bold blogCardTitle">
                                                 <?php echo $data['title']; ?>
                                             </p>
                                             <p class="h4 card-text fw-light lineClamp">
@@ -110,7 +110,7 @@
                                 <div class="card border-0 curserPoint">
                                     <div class="card-body border-bottom ">
                                         <a href="blog.php?id=<?php echo $data['id']; ?>" class="text-decoration-none text-dark hoverGreen">
-                                            <p class="h3 card-title fw-bold">
+                                            <p class="h3 card-title fw-bold blogCardTitle">
                                                 <?php echo $data['title']; ?>
                                             </p>
                                             <p class="h4 card-text fw-light lineClamp">

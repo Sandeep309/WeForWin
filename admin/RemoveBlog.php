@@ -75,15 +75,15 @@
                                                         <?php echo date('M d, Y', strtotime($data['date'])); ?>
                                                     </td>
                                                     <td>
-                                                        <button class="btn btn-primary">
+                                                        <a href="#" class="btn btn-primary">
                                                             <i class="far fa-eye"></i>
-                                                        </button>
+                                                        </a>
                                                     </td>
                                                     </td>
                                                     <td>
-                                                        <button class="btn btn-danger">
+                                                        <a href="process/removeBlogProcess.php?id=<?php echo $data['id']; ?>" class="btn btn-danger">
                                                             <i class="fas fa-minus-circle"></i>
-                                                        </button>
+                                                        </a>
                                                     </td>
                                                 </tr>
                                             </tbody>

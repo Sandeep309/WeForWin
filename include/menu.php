@@ -23,7 +23,7 @@
                         </li>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-bold" href="about.php">About</a>
+                            <a class="nav-link fw-bold" href="about.php">About us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link fw-bold" href="contact.php">Contact</a>

@@ -6,7 +6,7 @@
 html,
 body {
   scroll-behavior: smooth;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
 }
 // Colors
 $primaryBlue: #00a192 !important;
@@ -86,11 +86,7 @@ $lightGrey: #f3f3f3 !important;
 .dropdown-item {
   transition: all 0.2s linear;
 
-  &:hover {
-    background-color: $primaryBlue;
-    color: white;
-  }
-
+  &:hover,
   &:active {
     background-color: $primaryBlue;
     color: white;
