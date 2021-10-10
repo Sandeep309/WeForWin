@@ -48,7 +48,7 @@
           if (mysqli_num_rows($result) > 0) {
             while ($data = mysqli_fetch_assoc($result)) :
         ?>
-              <div class="col-md-6 mb-3">
+              <div class="col-xl-6 mb-3">
                 <div class="card border-0 curserPoint">
                   <div class="card-body border-bottom ">
                     <a href="blog.php?id=<?php echo $data['id']; ?>" class="text-decoration-none text-dark hoverGreen">
@@ -80,22 +80,23 @@
       </div>
       <div class="mt-3 text-end">
         <a href="blogs.php" class="btn btnGreen shadow-none">
-          <span class="d-flex align-items-center gap-2">OLDER POST<i class="fas fa-long-arrow-alt-right"></i>
+          <span class="d-flex align-items-center gap-2">
+            OLDER POST<i class="fas fa-long-arrow-alt-right"></i>
           </span>
         </a>
       </div>
     </section>
 
     <!-- Popular Blogs -->
-    <section class="container my-5">
-      <!-- Blog Title -->
-      <div class="text-center my-5">
+    <!-- <section class="container my-5"> -->
+    <!-- Blog Title -->
+    <!-- <div class="text-center my-5">
         <h2 class="text-center fw-bold text-uppercase">Popular Blogs</h2>
         <img src="img/lines.svg" class="img-fluid" alt="" />
-      </div>
+      </div> -->
 
-      <!-- Blog Contant -->
-      <div class="row">
+    <!-- Blog Contant -->
+    <!-- <div class="row">
         <?php
         include("./process/connectDb.php");
         if ($connect) {
@@ -133,14 +134,14 @@
         }
         mysqli_close($connect);
         ?>
-      </div>
-      <div class="mt-3 text-end">
+      </div> -->
+    <!-- <div class="mt-3 text-end">
         <a href="blogs.php" class="btn btnGreen shadow-none">
           <span class="d-flex align-items-center gap-2">VIEW MORE<i class="fas fa-long-arrow-alt-right"></i>
           </span>
         </a>
       </div>
-    </section>
+    </section> -->
 
     <!-- Video Glance -->
     <section class="container my-5">
@@ -172,6 +173,13 @@
         endforeach;
         ?>
 
+      </div>
+      <div class="mt-3 text-end">
+        <a href="videos.php" class="btn btnGreen shadow-none">
+          <span class="d-flex align-items-center gap-2">
+            FIND MORE<i class="fas fa-long-arrow-alt-right"></i>
+          </span>
+        </a>
       </div>
     </section>
 
