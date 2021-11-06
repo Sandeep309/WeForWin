@@ -48,53 +48,54 @@
                                         <th scope="col">Title</th>
                                         <th scope="col">Author</th>
                                         <th scope="col">Date</th>
-                                        <th>Restore</th>
-                                        <th>Remove</th>
+                                        <th class="tableBtnAlign">Restore</th>
+                                        <th class="tableBtnAlign">Delete</th>
                                     </tr>
                                 </thead>
-                                <?php
-                                include("./process/connectDb.php");
-                                if ($connect) {
-                                    $sql = 'SELECT * FROM blogs';
-                                    $result = mysqli_query($connect, $sql);
-                                    if (mysqli_num_rows($result) > 0) {
-                                        while ($data = mysqli_fetch_assoc($result)) :
-                                ?>
-                                            <tbody>
+
+                                <tbody>
+                                    <?php
+                                    include("./process/connectDb.php");
+                                    if ($connect) {
+                                        $sql = 'SELECT * FROM blogs WHERE bin="1"';
+                                        $result = mysqli_query($connect, $sql);
+                                        if (mysqli_num_rows($result) > 0) {
+                                            while ($data = mysqli_fetch_assoc($result)) :
+                                    ?>
                                                 <tr>
-                                                    <th scope="row">
+                                                    <td scope="row">
                                                         <?php echo $data['id']; ?>
-                                                    </th>
-                                                    <th scope="row">
+                                                    </td>
+                                                    <td>
                                                         <?php echo $data['title']; ?>
-                                                    </th>
+                                                    </td>
                                                     <td class="text-capitalize">
                                                         <?php echo $data['author']; ?>
                                                     </td>
                                                     <td>
                                                         <?php echo date('M d, Y', strtotime($data['date'])); ?>
                                                     </td>
-                                                    <td>
-                                                        <button class="btn btn-success">
+                                                    <td class="tableBtnAlign">
+                                                        <a href="process/restoreBlogProcess.php?id=<?php echo $data['id']; ?>" class="btn btn-success">
                                                             <i class="fas fa-trash-restore"></i>
-                                                        </button>
+                                                        </a>
                                                     </td>
-                                                    </td>
-                                                    <td>
-                                                        <button class="btn btn-danger">
+                                                    <td class="tableBtnAlign">
+                                                        <a href="process/removeBlogProcess.php?id=<?php echo $data['id']; ?>" class="btn btn-danger">
                                                             <i class="fas fa-trash"></i>
-                                                        </button>
+                                                        </a>
                                                     </td>
                                                 </tr>
-                                            </tbody>
-                                <?php
-                                        endwhile;
-                                    } else {
-                                        echo "query failed";
+                                    <?php
+                                            endwhile;
+                                        } else {
+                                            echo "No data available";
+                                        }
                                     }
-                                }
-                                mysqli_close($connect);
-                                ?>
+                                    mysqli_close($connect);
+                                    ?>
+                                </tbody>
+
                             </table>
                         </div>
                     </div>

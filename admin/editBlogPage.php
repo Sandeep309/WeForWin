@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add blog - We for win</title>
+    <title>Edit Blog Page | We For Win</title>
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,6 +18,27 @@
 </head>
 
 <body class="displayArea">
+
+
+    <?php
+    include("./process/connectDb.php");
+
+    if ($connect) {
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $sql = "SELECT * FROM blogs WHERE bin='0' AND id='$id' LIMIT 1";
+            $result = mysqli_query($connect, $sql);
+            if (mysqli_num_rows($result) > 0) {
+                $data = mysqli_fetch_assoc($result);
+            } else {
+                header("location:./editBlog.php?msg= please select editable blog");
+            }
+        } else {
+            header("location:./index.php?msg= something went wrong !");
+        }
+    }
+    mysqli_close($connect);
+    ?>
     <!-- Header -->
     <?php include('./includes/header.php'); ?>
 
@@ -30,46 +51,49 @@
                 <!-- Sub-Heading -->
                 <ol class="breadcrumb p-3 mb-4 rounded myLigthGrey">
                     <li class="breadcrumb-item " aria-current="page">
-                        <span class="h2">Add blog</span>
+                        <span class="h2">Edit Blog</span>
                     </li>
                 </ol>
 
                 <!-- Details -->
                 <div class="card border-0 shadow-sm mb-5">
                     <div class="card-header">
-                        Blog form
+                        Edit Blog Form
                     </div>
                     <div class="card-body">
-                        <form name="addBlogForm" action="process/addblogProcess.php" method="POST">
+
+                        <form name="addBlogForm" action="process/updateBlogProcess.php?id=<?php echo $data['id']; ?>" method="POST">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label for="" class="form-label"> Title </label>
-                                        <input type="text" name="title" class="form-control" required>
+                                        <input type="text" name="title" class="form-control" value="<?php echo $data['title']; ?>" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="" class="form-label"> Tag </label>
-                                        <input type="text" name="tag" class="form-control" required>
+                                        <input type="text" name="tag" class="form-control" value="<?php echo $data['tag']; ?>" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="" class="form-label"> Author </label>
-                                        <input type="text" name="author" class="form-control" required>
+                                        <input type="text" name="author" class="form-control" value="<?php echo $data['author']; ?>" required>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="mb-3">
                                         <label for="" class="form-label">Content</label>
-                                        <textarea class="form-control" name="content" rows="10" required></textarea>
+                                        <textarea class="form-control" name="content" rows="10" required>
+                                        <?php echo $data['content']; ?>
+                                        </textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <button type="submit" class="btn btn-primary w-100">
-                                    Upload
+                                    Update
                                 </button>
                             </div>
                         </form>

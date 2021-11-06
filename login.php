@@ -43,7 +43,10 @@
                     </form>
                 </div>
                 <div class="card-footer bg-transparent text-center">
-                    <a href="signup.php" class="small text-decoration-none text-secondary hoverGreen">
+                    <!-- <a href="signup.php" class="small text-decoration-none text-secondary hoverGreen">
+                        Need an account? Sign up!
+                    </a> -->
+                    <a href="#" class="small text-decoration-none text-secondary hoverGreen">
                         Need an account? Sign up!
                     </a>
                 </div>

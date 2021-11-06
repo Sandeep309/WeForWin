@@ -39,7 +39,7 @@
                     <div class="card-header">Blog List</div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table">
+                            <table class="table table-striped">
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
@@ -50,22 +50,23 @@
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <?php
-                                include("./process/connectDb.php");
-                                if ($connect) {
-                                    $sql = 'SELECT * FROM blogs';
-                                    $result = mysqli_query($connect, $sql);
-                                    if (mysqli_num_rows($result) > 0) {
-                                        while ($data = mysqli_fetch_assoc($result)) :
-                                ?>
-                                            <tbody>
+
+                                <tbody>
+                                    <?php
+                                    include("./process/connectDb.php");
+                                    if ($connect) {
+                                        $sql = 'SELECT * FROM blogs WHERE bin="0"';
+                                        $result = mysqli_query($connect, $sql);
+                                        if (mysqli_num_rows($result) > 0) {
+                                            while ($data = mysqli_fetch_assoc($result)) :
+                                    ?>
                                                 <tr>
-                                                    <th scope="row">
+                                                    <td scope="row">
                                                         <?php echo $data['id']; ?>
-                                                    </th>
-                                                    <th scope="row">
+                                                    </td>
+                                                    <td>
                                                         <?php echo $data['title']; ?>
-                                                    </th>
+                                                    </td>
                                                     <td class="text-capitalize">
                                                         <?php echo $data['author']; ?>
                                                     </td>
@@ -77,22 +78,22 @@
                                                             DO
                                                         </button>
                                                     </td>
-                                                    </td>
                                                     <td>
                                                         <button class="btn btn-warning">
                                                             DO
                                                         </button>
                                                     </td>
                                                 </tr>
-                                            </tbody>
-                                <?php
-                                        endwhile;
-                                    } else {
-                                        echo "query failed";
+                                    <?php
+                                            endwhile;
+                                        } else {
+                                            echo "query failed";
+                                        }
                                     }
-                                }
-                                mysqli_close($connect);
-                                ?>
+                                    mysqli_close($connect);
+                                    ?>
+                                </tbody>
+
                             </table>
                         </div>
                     </div>

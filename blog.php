@@ -25,12 +25,12 @@
     if ($connect) {
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
-            $sql = "SELECT * FROM blogs WHERE id = '$id' LIMIT 1";
+            $sql = "SELECT * FROM blogs WHERE bin='0' AND id='$id' LIMIT 1";
             $result = mysqli_query($connect, $sql);
             if (mysqli_num_rows($result) > 0) {
                 $data = mysqli_fetch_assoc($result);
             } else {
-                header("location:../blogs.php?msg= something went wrong");
+                header("location:./blogs.php?msg= something went wrong");
             }
         } else {
             header("location:./index.php?msg= something went wrong !");

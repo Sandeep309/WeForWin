@@ -45,7 +45,7 @@
                 <?php
                 include("./process/connectDb.php");
                 if ($connect) {
-                    $sql = 'SELECT * FROM blogs Order by id DESC';
+                    $sql = 'SELECT * FROM blogs WHERE bin="0" Order by id DESC';
                     $result = mysqli_query($connect, $sql);
                     if (mysqli_num_rows($result) > 0) {
                         while ($data = mysqli_fetch_assoc($result)) :

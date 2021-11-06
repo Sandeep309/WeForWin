@@ -13,8 +13,7 @@
             <div class=""><i class="fas fa-address-book me-2"></i>Employes</div>
             <i class="fas fa-chevron-right fa-xs accArrow"></i>
         </a> -->
-        <div class="panel">
-            <!-- Employe -->
+        <!-- <div class="panel">
             <a class="nav-link" href="employe.php">
                 <i class="fas fa-user-tie me-2"></i>Employe01
             </a>
@@ -24,18 +23,25 @@
             <a class="nav-link" href="employe.php">
                 <i class="fas fa-user-tie me-2"></i>Employe03
             </a>
-        </div>
+        </div> -->
         <a class="nav-link d-flex justify-content-between align-items-center" href="blogList.php">
-            Blog List
+            All Blogs
             <i class="fas fa-columns"></i>
         </a>
         <a class="nav-link d-flex justify-content-between align-items-center" href="addBlog.php">
             Add Blog
-            <i class="fas fa-user-plus"></i>
+            <!-- <i class="fas fa-user-plus"></i> -->
+            <i class="fas fa-plus-square"></i>
+        </a>
+        <a class="nav-link d-flex justify-content-between align-items-center" href="editBlog.php">
+            Edit Blog
+            <!-- <i class="fas fa-edit"></i> -->
+            <i class="fas fa-pen-square"></i>
         </a>
         <a class="nav-link d-flex justify-content-between align-items-center" href="RemoveBlog.php">
             Remove Blog
-            <i class="fas fa-user-minus"></i>
+            <!-- <i class="fas fa-user-minus"></i> -->
+            <i class="fas fa-minus-square"></i>
         </a>
         </a>
         <a class="nav-link d-flex justify-content-between align-items-center" href="recyleBin.php">

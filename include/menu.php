@@ -35,7 +35,7 @@
                         </button>
                         <ol class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMenu">
                             <li><a class="dropdown-item" href="login.php">Login</a></li>
-                            <li><a class="dropdown-item" href="#">Sign-up</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Sign-up</a></li> -->
                         </ol>
                     </div>
                 </div>
