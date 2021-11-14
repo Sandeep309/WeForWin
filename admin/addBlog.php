@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if (isset($_SESSION['userDetails']) && $_SESSION['userDetails']['email'] == 'weforwin@admin.com') {
+    $session_value =  $_SESSION['userDetails']['userName'];
+} else {
+    $_SESSION["msgRed"] = "Please Login !";
+    header('location:./login.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,14 +42,14 @@
                 <!-- Sub-Heading -->
                 <ol class="breadcrumb p-3 mb-4 rounded myLigthGrey">
                     <li class="breadcrumb-item " aria-current="page">
-                        <span class="h2">Add blog</span>
+                        <span class="h2">Add Blog</span>
                     </li>
                 </ol>
 
                 <!-- Details -->
                 <div class="card border-0 shadow-sm mb-5">
                     <div class="card-header">
-                        Blog form
+                        Create Blog Form
                     </div>
                     <div class="card-body">
                         <form name="addBlogForm" action="process/addblogProcess.php" method="POST">

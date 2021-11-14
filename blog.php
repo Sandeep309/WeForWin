@@ -46,9 +46,9 @@
     <main class="container-fluid mt-5">
         <!-- Blog One -->
         <section class="container my-5">
-            <article class="container textjustify" style="max-width: 60em;">
-                <div class="w-100 mx-auto">
-                    <img src="./img/blog.webp" class="img-fluid mb-3" alt="astronaut image">
+            <article class="container" style="max-width: 60em;">
+                <div class="blogHeroImg">
+                    <img src="./img/undraw_reading_re_29f8.svg" alt="blog">
                 </div>
                 <h1 class="fw-bold">
                     <?php echo $data['title']; ?>

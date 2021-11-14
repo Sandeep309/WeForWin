@@ -18,9 +18,9 @@
                         <li class="nav-item">
                             <a class="nav-link fw-bold" href="blogs.php">Blogs</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link fw-bold" href="videos.php">Videos</a>
-                        </li>
+                        </li> -->
                         </li>
                         <li class="nav-item">
                             <a class="nav-link fw-bold" href="about.php">About us</a>
@@ -34,7 +34,7 @@
                             <i class="fas fa-user-circle"></i>
                         </button>
                         <ol class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMenu">
-                            <li><a class="dropdown-item" href="login.php">Login</a></li>
+                            <li><a class="dropdown-item" href="../weforwin/admin/login.php">Login</a></li>
                             <!-- <li><a class="dropdown-item" href="#">Sign-up</a></li> -->
                         </ol>
                     </div>

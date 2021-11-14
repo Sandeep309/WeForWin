@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if (isset($_SESSION['userDetails']) && $_SESSION['userDetails']['email'] == 'weforwin@admin.com') {
+    $session_value =  $_SESSION['userDetails']['userName'];
+} else {
+    $_SESSION["msgRed"] = "Please Login !";
+    header('location:./login.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +42,7 @@
                 <!-- Sub-Heading -->
                 <ol class="breadcrumb p-3 mb-4 rounded myLigthGrey">
                     <li class="breadcrumb-item " aria-current="page">
-                        <span class="h2">Edit blog</span>
+                        <span class="h2">Edit Blog</span>
                     </li>
                 </ol>
 
@@ -42,7 +54,7 @@
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th scope="col">#</th>
+                                        <th scope="col">Id</th>
                                         <th scope="col">Title</th>
                                         <th scope="col">Author</th>
                                         <th scope="col">Date</th>

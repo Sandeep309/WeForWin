@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if (isset($_SESSION['userDetails']) && $_SESSION['userDetails']['email'] == 'weforwin@admin.com') {
+    $session_value =  $_SESSION['userDetails']['userName'];
+} else {
+    $_SESSION["msgRed"] = "Please Login !";
+    header('location:./login.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,47 +47,86 @@
                     </li>
                 </ol>
 
-                <div class="row">
-                    <div class="col-md-6 col-lg-3 mb-3">
+                <div class="row mb-3">
+                    <p class="h3 mb-3">Analyze</p>
+                    <div class="col-md-6 mb-3">
                         <div class="card bg-primary text-light shadow border-0 cardBlue">
                             <div class="card-body">
-                                <p class="fs-4">Total Blog</p>
+                                <?php
+                                include('process/connectDb.php');
+                                if ($connect) {
+                                    $fetchTotalBlog = "SELECT COUNT(DISTINCT title) FROM blogs";
+                                    $result = mysqli_query($connect, $fetchTotalBlog);
+                                    $row = mysqli_fetch_array($result);
+                                    $totalBlog = $row[0];
+                                } else {
+                                    mysqli_connect($connect);
+                                }
+                                mysqli_close($connect);
+
+                                ?>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="card-title h3">Total Blog</p>
+                                    <p class="card-text h2"><?php echo $totalBlog; ?></p>
+                                </div>
+
                             </div>
                             <div class="card-footer d-flex justify-content-between align-items-center">
-                                <a href="#" class="stretched-link text-decoration-none text-light">View more</a>
+                                <a href="blogList.php" class="stretched-link text-decoration-none text-light">View more</a>
                                 <i class="fas fa-chevron-right"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3 mb-3">
-                        <div class="card bg-warning shadow border-0 cardYellow">
-                            <div class="card-body">
-                                <p class="fs-4">Total Blog</p>
-                            </div>
-                            <div class="card-footer d-flex justify-content-between align-items-center">
-                                <a href="#" class="stretched-link text-decoration-none text-dark">View more</a>
-                                <i class="fas fa-chevron-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-3">
-                        <div class="card bg-success text-light shadow border-0 cardGreen">
-                            <div class="card-body">
-                                <p class="fs-4">Total Blog</p>
-                            </div>
-                            <div class="card-footer d-flex justify-content-between align-items-center">
-                                <a href="#" class="stretched-link text-decoration-none text-light">View more</a>
-                                <i class="fas fa-chevron-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-3">
+
+                    <div class="col-md-6 mb-3">
                         <div class="card bg-danger text-light shadow border-0 cardRed">
                             <div class="card-body">
-                                <p class="fs-4">Total Blog</p>
+                                <?php
+                                include('process/connectDb.php');
+                                if ($connect) {
+                                    $fetchRecyleBin = "SELECT COUNT(DISTINCT title) FROM blogs WHERE bin='1'";
+                                    $result = mysqli_query($connect, $fetchRecyleBin);
+                                    $row = mysqli_fetch_array($result);
+                                    $totalBin = $row[0];
+                                } else {
+                                    mysqli_connect($connect);
+                                }
+                                mysqli_close($connect);
+
+                                ?>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="card-title h3">Recyle Bin</p>
+                                    <p class="card-text h2"><?php echo $totalBin; ?></p>
+                                </div>
                             </div>
                             <div class="card-footer d-flex justify-content-between align-items-center">
-                                <a href="#" class="stretched-link text-decoration-none text-light">View more</a>
+                                <a href="recyleBin.php" class="stretched-link text-decoration-none text-light">View more</a>
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <p class="h3 mb-3">Create blog or edit existing</p>
+                    <div class="col-md-6 mb-3">
+                        <div class="card bg-success text-light shadow border-0 cardGreen">
+                            <div class="card-body">
+                                <p class="fs-4">Create blog</p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <a href="addBlog.php" class="stretched-link text-decoration-none text-light">View more</a>
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card bg-warning shadow border-0 cardYellow">
+                            <div class="card-body">
+                                <p class="fs-4">Edit blog</p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <a href="editBlog.php" class="stretched-link text-decoration-none text-dark">View more</a>
                                 <i class="fas fa-chevron-right"></i>
                             </div>
                         </div>

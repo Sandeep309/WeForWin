@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if (isset($_SESSION['userDetails']) && $_SESSION['userDetails']['email'] == 'weforwin@admin.com') {
+    $session_value =  $_SESSION['userDetails']['userName'];
+} else {
+    $_SESSION["msgRed"] = "Please Login !";
+    header('location:./login.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

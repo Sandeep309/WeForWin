@@ -16,9 +16,9 @@
                             <!-- <p class="mb-1"><i class="fas fa-user-circle me-2"></i>Guest</p> -->
                             <?php
                             if (isset($_SESSION['userDetails'])) {
-                                echo "<p class='mb-1'><i class='fas fa-user-circle me-2'></i>" . $_SESSION['userDetails']['userName'] . "</p>";
+                                echo "<p class='mb-1'><i class='fas fa-user-circle me-2'></i>Admin</p>";
+                                // echo "<p class='mb-1'><i class='fas fa-user-circle me-2'></i>" . $_SESSION['userDetails']['userName'] . "</p>";
                             } else {
-
                                 echo "<p class='mb-1'><i class='fas fa-user-circle me-2'></i>Guest</p>";
                             }
                             ?>
@@ -26,16 +26,6 @@
                     </li>
                     <li>
                         <hr class="dropdown-divider">
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="setting.php">
-                            <i class="fas fa-cog me-2"></i>Setting
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="login.php">
-                            <i class="fas fa-table me-2"></i>logIn
-                        </a>
                     </li>
                     <li>
                         <a class="dropdown-item" href="process/auth/logoutprocess.php">

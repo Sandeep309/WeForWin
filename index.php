@@ -144,14 +144,14 @@
     </section> -->
 
     <!-- Video Glance -->
-    <section class="container my-5">
-      <!-- Blog Title -->
-      <div class="text-center my-5">
+    <!-- <section class="container my-5"> -->
+    <!-- Blog Title -->
+    <!-- <div class="text-center my-5">
         <h2 class="text-center fw-bold text-uppercase">Video Glance</h2>
         <img src="img/lines.svg" class="img-fluid" alt="" />
-      </div>
-      <!-- Video Content -->
-      <div class="row">
+      </div> -->
+    <!-- Video Content -->
+    <!-- <div class="row">
         <?php
         $videoDetails = array(
           "I believe every human has a finite number of heartbeats." => "https://www.youtube.com/embed/oqFn6AHoJZQ",
@@ -180,8 +180,8 @@
             FIND MORE<i class="fas fa-long-arrow-alt-right"></i>
           </span>
         </a>
-      </div>
-    </section>
+      </div> -->
+    <!-- </section> -->
 
     <!-- Who We Are -->
     <section class="container my-5">
